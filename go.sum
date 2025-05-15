@@ -1,7 +1,5 @@
 github.com/HashemJaafar7/goerrors v0.1.8 h1:akEd9YDnxcZK7VDr+g8H3oZQFrY3reGrHoK+AlGzKhE=
 github.com/HashemJaafar7/goerrors v0.1.8/go.mod h1:ADu+Z2SSf66fJ+TKw9SKAcZGNSX6LGvkyAnm7lMFRmg=
-github.com/HashemJaafar7/testutils v0.1.5 h1:A3nRdD8oH9FuFWdOHTqgRPE46cyMGHZEzslI7XLkt1I=
-github.com/HashemJaafar7/testutils v0.1.5/go.mod h1:Ne2k5eufG8YeJVc8hShr14Pz15ctkoCU9xGdS9WB+18=
 github.com/HashemJaafar7/testutils v0.1.8 h1:IU4NzjS/dW0kiEvUQkZqzECcBlsKrHRc72Zl70IQolY=
 github.com/HashemJaafar7/testutils v0.1.8/go.mod h1:6kiVGu+bWcTP9J3WfaYhozISK/iPHNmqmCPOgS68EoM=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
