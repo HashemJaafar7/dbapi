@@ -1,8 +1,18 @@
-module github.com/HashemJaafar7/go_database_api
+module github.com/HashemJaafar7/dbapi
 
 go 1.24.3
 
-require github.com/HashemJaafar7/go_test v0.1.5
+// version should be update
+require (
+	github.com/HashemJaafar7/goerrors v0.1.0
+	github.com/HashemJaafar7/testutils v0.1.7
+)
+
+// For local development
+replace (
+	github.com/HashemJaafar7/goerrors => ../goerrors
+	github.com/HashemJaafar7/testutils => ../testutils
+)
 
 require (
 	github.com/dgraph-io/ristretto/v2 v2.2.0 // indirect

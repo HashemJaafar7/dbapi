@@ -1,9 +1,13 @@
-package go_database_api
+package dbapi
 
 import (
-	"fmt"
-
+	"github.com/HashemJaafar7/goerrors"
 	badger "github.com/dgraph-io/badger/v4"
+)
+
+const (
+	ErrKeyIsUsed   = "ErrKeyIsUsed"
+	ErrKeyNotFound = "ErrKeyNotFound"
 )
 
 type DB = *badger.DB
@@ -59,7 +63,7 @@ func Add(db DB, key []byte, value []byte) error {
 	err := db.Update(func(txn *badger.Txn) error {
 		_, err := txn.Get(key)
 		if err == nil {
-			return fmt.Errorf("key %v is used", key)
+			return goerrors.Errorf(ErrKeyIsUsed, "key %v is used", key)
 		}
 		return txn.Set(key, value)
 	})
@@ -110,7 +114,7 @@ func Get(db DB, key []byte) ([]byte, error) {
 	})
 	if err != nil {
 		if err == badger.ErrKeyNotFound {
-			return nil, fmt.Errorf("key %v not found", key)
+			return nil, goerrors.Errorf(ErrKeyNotFound, "key %v not found", key)
 		}
 		return nil, err
 	}
