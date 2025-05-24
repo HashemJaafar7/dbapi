@@ -8,6 +8,11 @@ require (
 	github.com/HashemJaafar7/testutils v0.1.8
 )
 
+replace (
+	github.com/HashemJaafar7/goerrors => ../goerrors
+	github.com/HashemJaafar7/testutils => ../testutils
+)
+
 require (
 	github.com/dgraph-io/ristretto/v2 v2.2.0 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
